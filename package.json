@@ -1,0 +1,40 @@
+{
+  "name": "complaint_board",
+  "version": "1.0.0",
+  "description": "host",
+  "main": "index.js",
+  "dependencies": {
+    "bcrypt": "^4.0.1",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.2",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "jsdom": "^16.2.2",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.9.10",
+    "nodemailer": "^6.4.10",
+    "nodemon": "^2.0.3",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kartikeychandraa/COMPLAINT_BOARD.git"
+  },
+  "keywords": [
+    "\u001b[A\u001b[C\u001b[B"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kartikeychandraa/COMPLAINT_BOARD/issues"
+  },
+  "homepage": "https://github.com/Kartikeychandraa/COMPLAINT_BOARD#readme"
+}

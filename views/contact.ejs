@@ -1,0 +1,229 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+     <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+  />
+    <style>
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: #3498db;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover{background-color: #3498db;
+color: white;}
+
+ul.topnav li.right {float: right;}
+ul.topnav li.left {float: left;}
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+}
+/*====----------------------------------------------------------------------*/
+b{
+  background-color: #59ace0;
+  color: black;
+  font-family: consolas;
+  text-align: center;
+}
+h1{
+  color: black;
+
+}
+#form-outer{
+  background-color: white;
+  border-radius: 10px;
+  margin: 25px;
+  
+}
+.labels {
+  display: inline-block;
+  text-align: right;
+  width: 40%;
+  padding: 5px;
+  vertical-align: top;
+  margin-top: 10px;
+}
+.rightTab {
+  display: inline-block;
+  text-align: left;
+  width: 48%;
+  vertical-align: middle;
+}
+
+.input-field {
+  height: 20px;
+  width: 280px;
+  padding: 5px;
+  margin: 10px;
+  border: 1px solid #c0c0c0;
+  border-radius: 2px;
+}
+
+
+#submit {
+  background-color: #59ace0;
+  border-radius: 4px;
+  color: white;
+  font-size: 1em;
+  height: 40px;
+  width: 96px;
+  margin: 10px;
+  border: 0px solid;
+}
+
+/*-------------------------------------------------------------------------------------------------------------*/
+
+.h2 {
+  text-align: center;
+}
+
+table caption {
+  padding: .5em 0;
+}
+
+@media screen and (max-width: 767px) {
+  table caption {
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+.p {
+  text-align: center;
+  padding-top: 140px;
+  font-size: 14px;
+}
+
+    </style>
+  </head>
+<title>ContactUs</title>
+<body>
+<ul class="topnav">
+   <li class="left"><a  href="#home">LOGO</a></li>
+  
+  <li><a href="/indexmain">New Complaint</a></li>
+  <li><a href="/active">Active Complaint</a></li>
+  <li><a href="/pending">Pending Complaint</a></li>
+  <li><a href="/resolved">Resolved Complaint</a></li>
+
+  <li class="right"> <a href="/profile">Profile</a></li>
+  <li class="right"><a href="/contact">Contact</a></li>
+ 
+</ul>
+<!------------------------------------------------------------new complaint--- -->
+<div class="container">
+ <center> <h1>CONTACT</h1> </center>
+<hr>
+<br>
+<center>
+<h4> We'd love to help ! </h4>
+<h5> We like to solve problems , Feel free to say Hi </h5>
+</center>
+<br>
+<div class="row">
+<div class="col-md-6" >
+<form action="/contact" method="POST">
+  <center>
+  <input type="text" class="form-control" name="name" style="width: 75%;margin-bottom: 10px" placeholder="Your Name">
+  <input type="text" class="form-control" name="email" style="width: 75%;margin-bottom: 10px;" placeholder="Email">
+  <textarea class="form-control" name="message" style="width: 75%;margin-bottom: 10px;" rows="3" placeholder="Message"></textarea>
+  <br>
+  <input type="submit" class="btn btn-primary" style="width: 25%;" value="Send">
+</center>
+</form>
+
+</div>
+
+<div class="col-md-6 table-responsive">
+<center>
+  <table class="table">
+    <tr>
+      <td><img src="gps.png" width="24px" height="30px" style="padding-right: 5px" />
+      </td>
+      <td> House No.14 New Azad Nagar ,Kalyanpur ,kanpur</td>
+    </tr>
+    <tr>
+      <td><img src="phone.png" width="24px" height="24px" style="padding-right: 5px">
+      </td>
+      <td>
+        +91 7525947775
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <img src="mail.png" width="30px" height="30px" style="padding-right: 5px">
+      </td>
+      <td>kartikeychandraa@gmail.com</td>
+    </tr>
+ <tr>
+  <td>
+    <a href="https://www.facebook.com/kartikey.chandra.5"><img src="facebook.png" width="30px" height="30px"></a>
+  </td>
+  <td> <a href="https://github.com/Kartikeychandraa"><img src="github.png" width="30px" height="30px"></a> </td>
+ </tr>
+  </table>
+ 
+</center>
+</div>
+
+</div>
+</div>
+<!-- ----------------------------------------------------------------contact-end-->
+<div class="container" >
+  <center>
+    <p>If you like us , Give us a Like 
+      <button style="background-color: white;border: 0px">
+        <img src="like.png">
+      </button>
+    </p>
+  </center>
+  </div>
+
+
+
+
+<!------------------------------------------------------------------------------------->
+    <script src="https://use.fontawesome.com/08eae55fd0.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    >
+      </script>
+          <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"
+          >
+    </script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+</body>
+</html>

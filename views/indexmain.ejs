@@ -1,0 +1,255 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <style>
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: #3498db;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover{background-color: #3498db;
+color: white;}
+
+ul.topnav li.right {float: right;}
+ul.topnav li.left {float: left;}
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+}
+/*====----------------------------------------------------------------------*/
+b{
+  background-color: #59ace0;
+  color: black;
+  font-family: consolas;
+  text-align: center;
+}
+h1{
+  font-size: 25px;
+  color: black;
+  text-shadow: 1px 1px 1px red;
+}
+#form-outer{
+  background-color: white;
+  border-radius: 10px;
+  margin: 25px;
+  
+}
+.labels {
+  display: inline-block;
+  text-align: right;
+  width: 40%;
+  padding: 5px;
+  vertical-align: top;
+  margin-top: 10px;
+}
+.rightTab {
+  display: inline-block;
+  text-align: left;
+  width: 48%;
+  vertical-align: middle;
+}
+
+.input-field {
+  height: 20px;
+  width: 280px;
+  padding: 5px;
+  margin: 10px;
+  border: 1px solid #c0c0c0;
+  border-radius: 2px;
+}
+
+
+#submit {
+  background-color: #59ace0;
+  border-radius: 4px;
+  color: white;
+  font-size: 1em;
+  height: 40px;
+  width: 96px;
+  margin: 10px;
+  border: 0px solid;
+}
+
+/*-------------------------------------------------------------------------------------------------------------*/
+
+.h2 {
+  text-align: center;
+}
+
+table caption {
+  padding: .5em 0;
+}
+
+@media screen and (max-width: 767px) {
+  table caption {
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+.p {
+  text-align: center;
+  padding-top: 140px;
+  font-size: 14px;
+}
+
+
+
+    </style>
+  </head>
+
+<body>
+<ul class="topnav">
+   <li class="left"><a  href="#home">LOGO</a></li>
+  
+  <li><a href="/indexmain">New Complaint</a></li>
+  <li><a href="/active">Active Complaint</a></li>
+  <li><a href="/pending">Pending Complaint</a></li>
+  <li><a href="/resolved">Resolved Complaint</a></li>
+
+  <li class="right"> <a href="#contact">Profile</a></li>
+  <li class="right"><a href="#contact">Contact</a></li>
+  <li class="right"><form action="/logout?_method=DELETE" method="POST"><button>Logout</button></form></li>
+</ul>
+<!-- ----------------------------------------------------------------------------------new complaint--- -->
+<div id="newcomplaint" >
+<h1 id="title" align="center"><u>Have a New Complaint,We are ready to solve it</u></h1>
+<div id="form-outer">
+  <p id="description" align="center">Please enter the required data.</p>
+  <br></br>
+  <form id="survey-form" action="/complaint" method="POST">
+    <div class="rowTab">
+      <div class="labels">
+        <label id="name-label" for="name"><strong style="color: red;">*</strong> Date of Incident: </label>
+      </div>
+      <div class="rightTab">
+        <input type="Date" placeholder="DD-MM-YYYY" name="cdate" required>
+      </div>
+    </div> 
+    <br>
+    <div class="rowTab">
+      <div class="labels">
+        <label id="name-label" for="name"><strong style="color: red;">*</strong> Time of Incident: </label>
+      </div>
+      <div class="rightTab">
+        <input type="Time" placeholder="HH-MM-SS" required>
+      </div>
+    </div> 
+    <br>
+    <div class="rowTab">
+      <div class="labels">
+        <label for="most-like">Location of incident:</label>
+      </div>
+     <div class="rightTab">
+      <input type="text" name="clocation" id="name" class="input-field" maxlength="35" size="30" required placeholder="LOCATION">       
+      </div>
+    </div>
+    <br>
+    <div class="rowTab">
+      <div class="labels">
+        <label id="naem-label" for="name"><strong style="color: red;">*</strong>Who/What is the subject of complaint:</label>
+      </div>
+      <div class="rightTab">
+        <input type="text" name="csubject" id="text" size="30" class="input-field" maxlength="35" size="30" required>
+      </div>
+    </div>
+    <br>
+    <div class="rowTab">
+      <div class="labels">
+        <label for="comments"><strong style="color: red;">*</strong>Summary of Complaint/Issue:</label>
+      </div>
+      <div class="rightTab">
+        <textarea id="comments" class="input-field" style="height:100px;resize:horizontal; width:350px;" name="csummary" placeholder="Enter your Summary here..."></textarea>
+      </div>
+    </div>
+    <br>
+       <div class="rowTab">
+      <div class="labels">
+        <label id="naem-label" for="name">Witness (If ANY)</label>
+      </div>
+    </div>
+    <br>
+    <div class="rowTab">
+      <div class="labels">
+        <label for="most-like">Name:</label>
+      </div>
+     <div class="rightTab">
+      <input type="text" name="wname" placeholder="" class="input-field" maxlength="35" size="30">       
+      </div>
+    </div>
+    <br>
+    <div class="rowTab">
+      <div class="labels">
+        <label for="most-like">Address:</label>
+      </div>
+     <div class="rightTab">
+      <input type="text" name="waddress" placeholder="" class="input-field" maxlength="35" size="30">       
+      </div>
+    </div>
+    <br>
+    <div class="rowTab">
+      <div class="labels">
+        <label for="most-like">Contact Number:</label>
+      </div>
+     <div class="rightTab">
+      <input type="text" name="wcontact" placeholder="" class="input-field" maxlength="35" size="30">       
+      </div>
+    </div>
+    <br>
+    <div class="rowTab">
+      <div class="labels">
+        <label for="comments">As a result of making this complaint , is there any outcome you would like : </label>
+      </div>
+      <div class="rightTab">
+        <textarea id="comments" class="input-field" style="height:100px;resize:horizontal; width:350px;" name="wcomment" placeholder="Enter your comment here..."></textarea>
+      </div>
+    </div>
+    <button id="submit" style="float: right;" type="submit">Submit</button>
+  </form>
+</div>
+<br>
+<!-----------------------------------------------------------------------new complaint end ------------- -->
+</div>
+
+
+<!------------------------------------------------------------------------------------->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    >
+      </script>
+          <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"
+          >
+    </script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+</body>
+</html>

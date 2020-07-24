@@ -1,0 +1,266 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+      .top-right {
+        position: absolute;
+        top: 8px;
+        right: 16px;
+      }
+      .btn {
+        background-color: white;
+
+        color: black;
+        padding: 16px 32px;
+        text-align: center;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition: 0.3s;
+        border-color: black;
+        border-width: 2px;
+        width: auto;
+        height: auto;
+      }
+
+      .btn:hover {
+        background-color: #3498db;
+        color: white;
+      }
+      .nav-item{
+        transition: 0.3s;
+      }
+      #loader{
+        position: fixed;
+width: 100%;
+height: 100vh;
+z-index: 9999;
+}
+    </style>
+      <script>
+    function loader(){
+      
+      document.getElementById("main").style.display = "block"; 
+      document.getElementById("loader").style.display = "none"; 
+    }
+  </script>
+  </head>
+
+  <body onload="loader()">
+<!-- -----------------------------------------------------------loader---------------- -->
+<div id="loader">
+  <img src="loader.gif">
+</div>
+<!-- -------------------------------------------------------------loader-end -->
+<div id="main" class="container" style="display: none;">
+    <ul class="nav justify-content-end">
+      <li class="nav-item">
+        <form action="/" method="GET">
+        <a class="nav-link " href="/">Home</a> </form>
+      </li>
+      <li class="nav-item">
+        <form action="/login" method="GET">
+        <a class="nav-link" href="/login">LogIn</a>
+        </form>
+      </li>
+      <li class="nav-item">
+        <form action="/register" method="GET">
+        <a class="nav-link" href="/register">Register</a></form>
+      </li>
+       <li class="nav-item">
+        <form action="/register" method="GET">
+        <a class="nav-link" href="/payment">Donate Us</a></form>
+      </li>
+    </ul>
+    <!--GET STARTED---------------------------------------------------------------------------->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="jumbotron jumbotron-fluid" style="background-color: white;">
+          <div class="container">
+            <p class="lead" style="align-self:center">
+              <button
+                type="button"
+                class="btn btn-outline-primary"
+                style="margin-bottom: 10px;"
+              >
+                <h1 class="btn">Get Started</h1>
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--JUMBOTRON END ------------------------------------------------------------------------------>
+    <!--PARALLEX SECTION (1) ------------------------------------------------------------------------>
+    <div
+      class="row"
+      style="background: #3498db; border: 2px solid white;
+    padding: 10px;
+    border-radius: 50px 20px;"
+    >
+      <div class="col-md-8">
+        <img
+          src="main.jpg"
+          class="img-fluid"
+          style="border: 2px solid white;
+        padding: 10px;
+        border-radius: 50px 20px;width: 300px;
+        height: 250px;"
+        />
+      </div>
+      <div class="col-md-4" >
+        <p><h2 style="color: white;">Be Connected with us from anywhere</h2></p>
+      </div>
+    </div>
+
+    <br />
+    <!--PARALLEX SECTION (1) ---------------------------------------------------------------------------->
+    <div
+      class="row"
+      style="border: 2px solid #3498db;
+    padding: 10px;
+    border-radius: 50px 20px;"
+    >
+      <div class="col-md-4">
+        <p><h2 style="color: #3498db;">Your Complaints are private from our side,Feel safe,Be Happy</h2></p>
+      </div>
+      <div class="col-md-8">
+        <img
+          src="main2.jpg"
+          class="img-fluid"
+          style="border: 2px solid white;
+        padding: 10px;
+        border-radius: 50px 20px;
+        width: 250px;
+        height: 250px;
+        float: right;"
+        />
+      </div>
+    </div>
+
+    <!--NEXT SECTION ----------------------------------------------------------------------------------->
+    <!-- PARALLAX 2------------------------------------------------------------------------------------->
+    <div class="row">
+      <div class="col-md-12">
+        <h1 style="color: #3498db;text-align: center;margin-right: 50px;">
+          <b> Get started with Complaint Board today. </b>
+        </h1>
+      </div>
+    </div>
+    <!--PARALLAX 2-------------------------------------------------------------------------------------->
+    <!--GET STARTED AGAIN------------------------------------------------------------------------------>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="jumbotron jumbotron-fluid" style="background-color: white;">
+          <div class="container">
+            <p class="lead">
+              <button
+                type="button"
+                class="btn btn-outline-primary"
+                style="margin-bottom: 10px;text-align: center;align-self: center;"
+              >
+                <h1 class="btn">Get Started</h1>
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--FOOTER -------------------------------------------------------------------------->
+<!-- Footer -->
+<footer class="page-footer font-small pt-4" style="border-top: solid 2px #3498db ">
+
+  <!-- Footer Links -->
+  <div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase">About Us</h5>
+       <p><img src="gps.png"  width="24px" height="30px"> House No.14 New Azad Nagar ,Kalyanpur ,kanpur</p>
+       <p><img src="phone.png" width="24px" height="24px">+91 7525947775</p>
+<p>  <img src="mail.png" width="30px" height="30px">kartikeychandraa@gmail.com</p>
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+
+        <!-- Links -->
+        <h5 class="text-uppercase">Usefull links</h5>
+
+        <ul class="list-unstyled">
+          <li>
+           <a href="https://www.facebook.com/kartikey.chandra.5"><img src="facebook.png" width="30px" height="30px"> Facebook</a>
+          </li>
+          <li>
+            <a href="https://github.com/Kartikeychandraa"><img src="github.png" width="30px" height="30px">Github</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+
+        <!-- Links -->
+        <h5 class="text-uppercase">Feedback</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="/contact">Give your Feed Here</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3" style="border-top: solid 2px #3498db">Copyright <abbr title="Copyright to bootstrap">&copy</abbr> 2011-2020
+    <a href="https://getbootstrap.com/">  The Bootstrap Authors</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+    <!--FOOTER END----------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------END-->
+
+  </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    >
+      </script>
+          <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"
+          >
+    </script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

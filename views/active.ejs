@@ -1,0 +1,205 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <style>
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: #3498db;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover{background-color: #3498db;
+color: white;}
+
+ul.topnav li.right {float: right;}
+ul.topnav li.left {float: left;}
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+}
+/*====----------------------------------------------------------------------*/
+b{
+  background-color: #59ace0;
+  color: black;
+  font-family: consolas;
+  text-align: center;
+}
+h1{
+  font-size: 25px;
+  color: black;
+  text-shadow: 1px 1px 1px red;
+}
+#form-outer{
+  background-color: white;
+  border-radius: 10px;
+  margin: 25px;
+  
+}
+.labels {
+  display: inline-block;
+  text-align: right;
+  width: 40%;
+  padding: 5px;
+  vertical-align: top;
+  margin-top: 10px;
+}
+.rightTab {
+  display: inline-block;
+  text-align: left;
+  width: 48%;
+  vertical-align: middle;
+}
+
+.input-field {
+  height: 20px;
+  width: 280px;
+  padding: 5px;
+  margin: 10px;
+  border: 1px solid #c0c0c0;
+  border-radius: 2px;
+}
+
+
+#submit {
+  background-color: #59ace0;
+  border-radius: 4px;
+  color: white;
+  font-size: 1em;
+  height: 40px;
+  width: 96px;
+  margin: 10px;
+  border: 0px solid;
+}
+
+/*-------------------------------------------------------------------------------------------------------------*/
+
+.h2 {
+  text-align: center;
+}
+
+table caption {
+  padding: .5em 0;
+}
+
+@media screen and (max-width: 767px) {
+  table caption {
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+.p {
+  text-align: center;
+  padding-top: 140px;
+  font-size: 14px;
+}
+
+
+
+    </style>
+  </head>
+
+<body>
+<ul class="topnav">
+   <li class="left"><a  href="#home">LOGO</a></li>
+  
+  <li><a href="/indexmain">New Complaint</a></li>
+  <li><a href="/active">Active Complaint</a></li>
+  <li><a href="/pending">Pending Complaint</a></li>
+  <li><a href="/resolved">Resolved Complaint</a></li>
+
+  <li class="right"> <a href="#contact">Profile</a></li>
+  <li class="right"><a href="#contact">Contact</a></li>
+    <li class="right"><a href="/payment">Donate Us</a></li>
+  <li class="right"><form action="/logout?_method=DELETE" method="POST"><button>Logout</button></form></li>
+</ul>
+</div>
+
+<!-----------------------------------------------------------------------active ------------- -->
+<div id="activecomplaint" > 
+  <h1 style="text-align: center;">These are your active complaints</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="table-responsive">
+        <table summary="This table shows how to create responsive tables using Bootstrap's default functionality" class="table table-bordered table-hover">
+          <caption class="text-center">Our Services are at there best</caption>
+          <thead>
+            <tr>
+              <th>Complaint Id</th>
+              <th>Date of Incident</th>
+              <th>Subject</th>
+              <th>Summary</th>
+              <th>location</th>
+            </tr>
+          </thead>
+          <tbody>
+          <% for( var i = 0 ; i < active1.length ; i++ ) {  %>
+            <tr>
+             <td><%= active1[i]._id %></td>
+              <td><%= active1[i].doi %></td>
+              <td><%= active1[i].subject %></td>
+              <td><%= active1[i].summary %></td>
+              <td><%= active1[i].location %></td>
+            </tr>
+            <% } %>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="5" class="text-center">Data retrieved</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p class="p">Thank you , For using Our Services </p>
+</div>
+
+
+
+
+
+<!------------------------------------------------------------------------------------->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    >
+      </script>
+          <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"
+          >
+    </script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+</body>
+</html>
