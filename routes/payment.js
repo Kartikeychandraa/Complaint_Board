@@ -6,25 +6,27 @@ var querystring = require('querystring');
 
 const port = 3000;
 
-// --------------------------------------------------some usefull details------
+// --------------------------------------------------some usefull details----------
 var merchant_id = process.env.merchant_id;
 var merchant_key = process.env.merchant_key;
-// ---------------------------------------creating unique order id------
-var date = Date.now();
 
-var order_id =Math.floor(Math.random() * 1000) + date;
+// ---------------------------------------creating-unique-order-id------------------
+let date = Date.now();
+
+let order_id =Math.floor(Math.random() * 1000) + date;
 
 var app = express();
 
  app.get('/payment',(req,res)=>{
+ 	var money = req.body.money;
         let params ={}
         params['MID'] = merchant_id,
         params['WEBSITE'] = 'WEBSTAGING',
         params['CHANNEL_ID'] = 'WEB',
         params['INDUSTRY_TYPE_ID'] = 'Retail',
-        params['ORDER_ID'] = order_id,
+        params['ORDER_ID'] = "67890",
         params['CUST_ID'] = 'ANONYMOUS_CUST001',
-        params['TXN_AMOUNT'] = '100',
+        params['TXN_AMOUNT'] = "123",
         params['CALLBACK_URL'] = 'http://localhost:'+port+'/callback',
         params['EMAIL'] = 'xyz@gmail.com',
         params['MOBILE_NO'] = '9999999999'

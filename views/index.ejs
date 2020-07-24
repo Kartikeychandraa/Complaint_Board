@@ -72,8 +72,29 @@ z-index: 9999;
         <a class="nav-link" href="/register">Register</a></form>
       </li>
        <li class="nav-item">
-        <form action="/register" method="GET">
-        <a class="nav-link" href="/payment">Donate Us</a></form>
+  <a href="$"  class="nav-link" data-toggle="modal" data-target="#exampleModalCenter">Donate Us</a>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Help Us to maintain our Website</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="/payment" method="GET">
+          <input type="text" class="form-control" name="money" placeholder="Rs" required>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn" data-dismiss="modal">Close</button>
+        <input type="submit" name="submitmoney" value="Donate Us" class="btn">
+         </form>
+      </div>
+    </div>
+  </div>
+</div>
       </li>
     </ul>
     <!--GET STARTED---------------------------------------------------------------------------->

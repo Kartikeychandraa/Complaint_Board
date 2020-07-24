@@ -347,6 +347,10 @@ app.post("/delete_complaint/:id",(req,res)=>{
 
   }
   else{console.log("id is not valid");}
+});
+// ------------------------------------------------------------donate API-----------
+app.get("/donate",(req,res)=>{
+  res.render("donate");
 })
 
 app.listen(process.env.PORT || 3000);
